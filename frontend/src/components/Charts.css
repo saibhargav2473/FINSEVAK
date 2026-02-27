@@ -1,0 +1,82 @@
+.charts-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 16px 32px 16px;
+  color: #e2e8f0;
+}
+
+.charts-title {
+  margin: 10px 0 0 0;
+}
+
+.charts-sub {
+  color: #94a3b8;
+  margin-bottom: 14px;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.panel {
+  background: rgba(2,6,23,0.55);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.inputs .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.inputs label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+.inputs input[type="number"] {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.stats div {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.stats span {
+  color: #93c5fd;
+  font-size: 12px;
+}
+
+.stats strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .inputs .grid { grid-template-columns: 1fr 1fr; }
+  .stats { grid-template-columns: 1fr; }
+}
+
+

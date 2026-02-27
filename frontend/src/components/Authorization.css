@@ -1,0 +1,370 @@
+/* Authorization.css */
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main container */
+.auth-hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Auth card */
+.auth-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+  position: relative;
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo section */
+.auth-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 32px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.auth-logo span:first-child {
+  font-size: 32px;
+}
+
+/* Typography */
+.auth-card h1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.auth-sub {
+  text-align: center;
+  color: #718096;
+  font-size: 16px;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+/* Form styles */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.field input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  background: #fafafa;
+  font-family: inherit;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  background: white;
+}
+
+.field input::placeholder {
+  color: #9ca3af;
+}
+
+/* Checkbox styles */
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.4;
+  cursor: pointer;
+  margin: 4px 0;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #667eea;
+  cursor: pointer;
+  margin-top: 1px;
+}
+
+/* Error message */
+.auth-error {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #fecaca;
+  font-weight: 500;
+}
+
+/* Submit button */
+.auth-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 16px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  margin-top: 8px;
+}
+
+.auth-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.auth-btn:active {
+  transform: translateY(0);
+}
+
+.auth-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+/* Footer */
+.auth-footer {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.auth-footer span {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+  font-family: inherit;
+  transition: color 0.2s ease;
+}
+
+.link-btn:hover {
+  color: #764ba2;
+}
+
+.link-btn:focus {
+  outline: none;
+  color: #764ba2;
+}
+
+/* Loading state (optional enhancement) */
+.auth-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.auth-btn:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .auth-hero {
+    padding: 16px;
+  }
+  
+  .auth-card {
+    padding: 32px 24px;
+    border-radius: 12px;
+  }
+  
+  .auth-card h1 {
+    font-size: 24px;
+  }
+  
+  .auth-logo {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .auth-logo span:first-child {
+    font-size: 28px;
+  }
+  
+  .auth-sub {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  
+  .field input {
+    padding: 12px 14px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  .auth-btn {
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .auth-card {
+    padding: 24px 20px;
+  }
+  
+  .auth-card h1 {
+    font-size: 22px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .field input {
+    border-color: #374151;
+  }
+  
+  .field input:focus {
+    border-color: #1f2937;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .auth-card {
+    animation: none;
+  }
+  
+  .auth-btn,
+  .field input,
+  .link-btn {
+    transition: none;
+  }
+  
+  .auth-btn:hover {
+    transform: none;
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  .auth-card {
+    background: #1f2937;
+    color: #f3f4f6;
+  }
+  
+  .auth-card h1 {
+    color: #f9fafb;
+  }
+  
+  .auth-sub {
+    color: #d1d5db;
+  }
+  
+  .field label {
+    color: #e5e7eb;
+  }
+  
+  .field input {
+    background: #374151;
+    border-color: #4b5563;
+    color: #f3f4f6;
+  }
+  
+  .field input:focus {
+    background: #4b5563;
+    border-color: #667eea;
+  }
+  
+  .field input::placeholder {
+    color: #9ca3af;
+  }
+  
+  .checkbox {
+    color: #e5e7eb;
+  }
+  
+  .auth-footer span {
+    color: #d1d5db;
+  }
+  
+  .auth-error {
+    background: #7f1d1d;
+    color: #fca5a5;
+    border-color: #991b1b;
+  }
+}
+
+/* Focus visible support */
+.field input:focus-visible,
+.auth-btn:focus-visible,
+.link-btn:focus-visible,
+.checkbox input:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .auth-hero {
+    background: white;
+  }
+  
+  .auth-card {
+    box-shadow: none;
+    border: 1px solid #e5e7eb;
+  }
+}
