@@ -216,6 +216,34 @@
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1);
 }
 
+.calc-card select.calc-select {
+  width: 100%;
+  padding: 14px 20px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f2937;
+  background: #f8fafc;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  cursor: pointer;
+  appearance: auto;
+}
+
+.calc-card select.calc-select:focus {
+  background: #ffffff;
+  border-color: #667eea;
+  box-shadow:
+    0 0 0 4px rgba(102, 126, 234, 0.1),
+    0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.calc-card select.calc-select:hover:not(:focus) {
+  background: #ffffff;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+}
+
 /* Results section styling */
 .result {
   background: linear-gradient(145deg, #f8fafc, #e2e8f0);
@@ -389,6 +417,7 @@
 
 /* Focus states for accessibility */
 .calc-card input:focus-visible,
+.calc-card select.calc-select:focus-visible,
 .overview-btn:focus-visible,
 .back-link:focus-visible {
   outline: 2px solid #667eea;
